@@ -15,7 +15,7 @@ def test_successful_switch_to_section_sauces_in_constructor(driver):
 # Проверяем успешное переключение на раздел конструктора "Соусы".
     WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(ConstructorSection.BULKI_SECTION_ACTIVE))
 
-    driver.find_element(*ConstructorSection.HEAD_NONACTIVE_SAUCES).click()
+    driver.find_element(*ConstructorSection.HEAD_NONACTIVE_FIRST).click()
 
     section_sauces = driver.find_element(*ConstructorSection.HEAD_SECTIONS_SAUCES_FILLINGS_ACTIVE)
 
@@ -25,7 +25,7 @@ def test_successful_switch_to_section_fillings_in_constructor(driver):
 # Проверяем успешное переключение на раздел конструктора "Начинки".
     WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located(ConstructorSection.BULKI_SECTION_ACTIVE))
 
-    driver.find_element(*ConstructorSection.HEAD_NONACTIVE_FILLINGS).click()
+    driver.find_element(*ConstructorSection.HEAD_NONACTIVE_SECOND).click()
 
     section_fillings = driver.find_element(*ConstructorSection.HEAD_SECTIONS_SAUCES_FILLINGS_ACTIVE)
 
